@@ -1,11 +1,9 @@
-public class SubMealBuilderB extends MealBuilder
-{
-	public void buildFood()
-	{
-		meal.setFood("Ò»¸ö¼¦Èâ¾í");
-	}
-	public void buildDrink()
-	{
-		 meal.setDrink("Ò»±­¹ûÖ­");
-	}
+public class SubMealBuilderB extends MealBuilder {
+    public void buildFood() {
+        meal.setFood("Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+    }
+
+    public void buildDrink() {
+        meal.setDrink("Ò»ï¿½ï¿½ï¿½ï¿½Ö­");
+    }
 }

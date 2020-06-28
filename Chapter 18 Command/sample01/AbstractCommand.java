@@ -1,4 +1,3 @@
-public interface AbstractCommand
-{
-	public void execute();
+public interface AbstractCommand {
+    public void execute();
 }

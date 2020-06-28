@@ -1,4 +1,3 @@
-public interface MyObserver
-{
-	void response();  //³éÏóÏìÓ¦·½·¨
+public interface MyObserver {
+    void response();  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½
 }

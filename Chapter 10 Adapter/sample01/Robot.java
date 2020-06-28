@@ -1,5 +1,5 @@
-public interface Robot
-{
-	public void cry();
-	public void move();
+public interface Robot {
+    public void cry();
+
+    public void move();
 }

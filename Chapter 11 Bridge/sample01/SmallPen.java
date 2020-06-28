@@ -1,8 +1,6 @@
-public class SmallPen extends Pen
-{
-	public void draw(String name)
-	{
-		String penType="Ð¡ºÅÃ«±Ê»æÖÆ";
-		this.color.bepaint(penType,name);			
-	}	
+public class SmallPen extends Pen {
+    public void draw(String name) {
+        String penType = "Ð¡ï¿½ï¿½Ã«ï¿½Ê»ï¿½ï¿½ï¿½";
+        this.color.bepaint(penType, name);
+    }
 }

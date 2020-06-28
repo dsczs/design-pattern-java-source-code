@@ -1,4 +1,3 @@
-public interface Television
-{
-	public void play();
+public interface Television {
+    public void play();
 }

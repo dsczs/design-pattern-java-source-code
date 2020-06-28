@@ -1,123 +1,115 @@
-class Student implements Cloneable
-{
-	private String stuName;
-	private String stuSex;
-	private int stuAge;
-	private String stuMajor;
-	private String stuCollege;
-	private String stuUniversity;
-	
-	public Student(String stuName,String stuSex,int stuAge,String stuMajor,String stuCollege,String stuUniversity)
-	{
-		this.stuName=stuName;
-		this.stuSex=stuSex;
-		this.stuAge=stuAge;
-		this.stuMajor=stuMajor;
-		this.stuCollege=stuCollege;
-		this.stuUniversity=stuUniversity;
-	}
-	
-	public void setStuName(String stuName) {
-		this.stuName = stuName; 
-	}
+class Student implements Cloneable {
+    private String stuName;
+    private String stuSex;
+    private int stuAge;
+    private String stuMajor;
+    private String stuCollege;
+    private String stuUniversity;
 
-	public void setStuSex(String stuSex) {
-		this.stuSex = stuSex; 
-	}
+    public Student(String stuName, String stuSex, int stuAge, String stuMajor, String stuCollege, String stuUniversity) {
+        this.stuName = stuName;
+        this.stuSex = stuSex;
+        this.stuAge = stuAge;
+        this.stuMajor = stuMajor;
+        this.stuCollege = stuCollege;
+        this.stuUniversity = stuUniversity;
+    }
 
-	public void setStuAge(int stuAge) {
-		this.stuAge = stuAge; 
-	}
+    public String getStuName() {
+        return (this.stuName);
+    }
 
-	public void setStuMajor(String stuMajor) {
-		this.stuMajor = stuMajor; 
-	}
+    public void setStuName(String stuName) {
+        this.stuName = stuName;
+    }
 
-	public void setStuCollege(String stuCollege) {
-		this.stuCollege = stuCollege; 
-	}
+    public String getStuSex() {
+        return (this.stuSex);
+    }
 
-	public void setStuUniversity(String stuUniversity) {
-		this.stuUniversity = stuUniversity; 
-	}
+    public void setStuSex(String stuSex) {
+        this.stuSex = stuSex;
+    }
 
-	public String getStuName() {
-		return (this.stuName); 
-	}
+    public int getStuAge() {
+        return (this.stuAge);
+    }
 
-	public String getStuSex() {
-		return (this.stuSex); 
-	}
+    public void setStuAge(int stuAge) {
+        this.stuAge = stuAge;
+    }
 
-	public int getStuAge() {
-		return (this.stuAge); 
-	}
+    public String getStuMajor() {
+        return (this.stuMajor);
+    }
 
-	public String getStuMajor() {
-		return (this.stuMajor); 
-	}
+    public void setStuMajor(String stuMajor) {
+        this.stuMajor = stuMajor;
+    }
 
-	public String getStuCollege() {
-		return (this.stuCollege); 
-	}
+    public String getStuCollege() {
+        return (this.stuCollege);
+    }
 
-	public String getStuUniversity() {
-		return (this.stuUniversity); 
-	}
-	
-	public Student clone()
-	{
-		Student cpStudent=null;
-		try
-		{
-			cpStudent=(Student)super.clone();
-		}
-		catch(CloneNotSupportedException e)
-		{
-		}
-		return cpStudent;
-	}
+    public void setStuCollege(String stuCollege) {
+        this.stuCollege = stuCollege;
+    }
+
+    public String getStuUniversity() {
+        return (this.stuUniversity);
+    }
+
+    public void setStuUniversity(String stuUniversity) {
+        this.stuUniversity = stuUniversity;
+    }
+
+    public Student clone() {
+        Student cpStudent = null;
+        try {
+            cpStudent = (Student) super.clone();
+        } catch (CloneNotSupportedException e) {
+        }
+        return cpStudent;
+    }
 }
 
-class MainClass 
-{
-	public static void main(String args[])
-	{
-		Student stu1,stu2,stu3;
-		
-		stu1=new Student("ÕÅÎÞ¼É","ÄÐ",24,"Èí¼þ¹¤³Ì","Èí¼þÑ§Ôº","ÖÐÄÏ´óÑ§"); //×´Ì¬ÏàËÆ
-		
-		//Ê¹ÓÃÔ­ÐÍÄ£Ê½
-		stu2=stu1.clone();
-		stu2.setStuName("Ñî¹ý");
-		
-		//Ê¹ÓÃÔ­ÐÍÄ£Ê½
-		stu3=stu1.clone();
-		stu3.setStuName("Ð¡ÁúÅ®");
-		stu3.setStuSex("Å®");		
-		
-		System.out.print("ÐÕÃû£º" + stu1.getStuName());
-		System.out.print("£¬ÐÔ±ð£º" + stu1.getStuSex());
-		System.out.print("£¬ÄêÁä£º" + stu1.getStuAge());
-		System.out.print("£¬×¨Òµ£º" + stu1.getStuMajor());
-		System.out.print("£¬Ñ§Ôº£º" + stu1.getStuCollege());
-		System.out.print("£¬Ñ§Ð££º" + stu1.getStuUniversity());
-		System.out.println();
-		
-		System.out.print("ÐÕÃû£º" + stu2.getStuName());
-		System.out.print("£¬ÐÔ±ð£º" + stu2.getStuSex());
-		System.out.print("£¬ÄêÁä£º" + stu2.getStuAge());
-		System.out.print("£¬×¨Òµ£º" + stu2.getStuMajor());
-		System.out.print("£¬Ñ§Ôº£º" + stu2.getStuCollege());
-		System.out.print("£¬Ñ§Ð££º" + stu2.getStuUniversity());
-		System.out.println();
+class MainClass {
+    public static void main(String args[]) {
+        Student stu1, stu2, stu3;
 
-		System.out.print("ÐÕÃû£º" + stu3.getStuName());
-		System.out.print("£¬ÐÔ±ð£º" + stu3.getStuSex());
-		System.out.print("£¬ÄêÁä£º" + stu3.getStuAge());
-		System.out.print("£¬×¨Òµ£º" + stu3.getStuMajor());
-		System.out.print("£¬Ñ§Ôº£º" + stu3.getStuCollege());
-		System.out.print("£¬Ñ§Ð££º" + stu3.getStuUniversity());
-		System.out.println();
-	}
+        stu1 = new Student("ï¿½ï¿½ï¿½Þ¼ï¿½", "ï¿½ï¿½", 24, "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", "ï¿½ï¿½ï¿½Ñ§Ôº", "ï¿½ï¿½ï¿½Ï´ï¿½Ñ§"); //×´Ì¬ï¿½ï¿½ï¿½ï¿½
+
+        //Ê¹ï¿½ï¿½Ô­ï¿½ï¿½Ä£Ê½
+        stu2 = stu1.clone();
+        stu2.setStuName("ï¿½ï¿½ï¿½");
+
+        //Ê¹ï¿½ï¿½Ô­ï¿½ï¿½Ä£Ê½
+        stu3 = stu1.clone();
+        stu3.setStuName("Ð¡ï¿½ï¿½Å®");
+        stu3.setStuSex("Å®");
+
+        System.out.print("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" + stu1.getStuName());
+        System.out.print("ï¿½ï¿½ï¿½Ô±ï¿½" + stu1.getStuSex());
+        System.out.print("ï¿½ï¿½ï¿½ï¿½ï¿½ä£º" + stu1.getStuAge());
+        System.out.print("ï¿½ï¿½×¨Òµï¿½ï¿½" + stu1.getStuMajor());
+        System.out.print("ï¿½ï¿½Ñ§Ôºï¿½ï¿½" + stu1.getStuCollege());
+        System.out.print("ï¿½ï¿½Ñ§Ð£ï¿½ï¿½" + stu1.getStuUniversity());
+        System.out.println();
+
+        System.out.print("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" + stu2.getStuName());
+        System.out.print("ï¿½ï¿½ï¿½Ô±ï¿½" + stu2.getStuSex());
+        System.out.print("ï¿½ï¿½ï¿½ï¿½ï¿½ä£º" + stu2.getStuAge());
+        System.out.print("ï¿½ï¿½×¨Òµï¿½ï¿½" + stu2.getStuMajor());
+        System.out.print("ï¿½ï¿½Ñ§Ôºï¿½ï¿½" + stu2.getStuCollege());
+        System.out.print("ï¿½ï¿½Ñ§Ð£ï¿½ï¿½" + stu2.getStuUniversity());
+        System.out.println();
+
+        System.out.print("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" + stu3.getStuName());
+        System.out.print("ï¿½ï¿½ï¿½Ô±ï¿½" + stu3.getStuSex());
+        System.out.print("ï¿½ï¿½ï¿½ï¿½ï¿½ä£º" + stu3.getStuAge());
+        System.out.print("ï¿½ï¿½×¨Òµï¿½ï¿½" + stu3.getStuMajor());
+        System.out.print("ï¿½ï¿½Ñ§Ôºï¿½ï¿½" + stu3.getStuCollege());
+        System.out.print("ï¿½ï¿½Ñ§Ð£ï¿½ï¿½" + stu3.getStuUniversity());
+        System.out.println();
+    }
 }

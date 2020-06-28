@@ -1,13 +1,10 @@
-public class Fan
-{
-	public void on()
-	{
-		System.out.println("·çÉÈ´ò¿ª£¡");	
-	}
-	
-	public void off()
-	{
-		System.out.println("·çÉÈ¹Ø±Õ£¡");		
-	}
-	
+public class Fan {
+    public void on() {
+        System.out.println("ï¿½ï¿½ï¿½È´ò¿ª£ï¿½");
+    }
+
+    public void off() {
+        System.out.println("ï¿½ï¿½ï¿½È¹Ø±Õ£ï¿½");
+    }
+
 }

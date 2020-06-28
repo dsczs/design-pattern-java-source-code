@@ -1,12 +1,9 @@
-public class Manager extends User
-{
-	public Manager()
-	{
-		System.out.println("´´½¨¾­Àí¶ÔÏó£¡");
-	}
-	
-	public void diffOperation()
-	{
-		System.out.println("¾­ÀíÓµÓĞ´´½¨ºÍÉóÅú¼ÙÌõÈ¨ÏŞ£¡");
-	}
+public class Manager extends User {
+    public Manager() {
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+    }
+
+    public void diffOperation() {
+        System.out.println("ï¿½ï¿½ï¿½ï¿½Óµï¿½Ğ´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¨ï¿½Ş£ï¿½");
+    }
 }

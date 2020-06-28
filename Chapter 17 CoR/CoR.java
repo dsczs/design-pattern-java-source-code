@@ -1,26 +1,22 @@
-public abstract class Handler
-{
-	protected Handler successor;
-	
-	public void setSuccessor(Handler successor)
-	{
-		this.successor=successor;
-	}
-	
-	public abstract void handleRequest(String request);
+public abstract class Handler {
+    protected Handler successor;
+
+    public void setSuccessor(Handler successor) {
+        this.successor = successor;
+    }
+
+    public abstract void handleRequest(String request);
 }
 
-public class ConcreteHandler extends Handler
-{
-	public void handleRequest(String request)
-	{
-		if(ÇëÇórequestÂú×ãÌõ¼þ)
-		{
-			......  //´¦ÀíÇëÇó£»
-		}
+public class ConcreteHandler extends Handler {
+    public void handleRequest(String request) {
+        if (ï¿½ï¿½ï¿½ï¿½requestï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)
+        {
+			......  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        }
 		else
-		{
-			this.successor.handleRequest(request); //×ª·¢ÇëÇó
-		}
-	}
+        {
+            this.successor.handleRequest(request); //×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        }
+    }
 }

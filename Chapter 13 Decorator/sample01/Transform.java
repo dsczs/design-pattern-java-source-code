@@ -1,4 +1,3 @@
-public interface Transform
-{
-	public void move();
+public interface Transform {
+    public void move();
 }

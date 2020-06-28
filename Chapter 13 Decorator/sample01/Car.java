@@ -1,12 +1,9 @@
-public final class Car implements Transform
-{
-	public Car()
-	{
-		System.out.println("±äÐÎ½ð¸ÕÊÇÒ»Á¾³µ£¡");
-	}
-	
-	public void move()
-	{
-		System.out.println("ÔÚÂ½µØÉÏÒÆ¶¯£¡");	
-	}
+public final class Car implements Transform {
+    public Car() {
+        System.out.println("ï¿½ï¿½ï¿½Î½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+    }
+
+    public void move() {
+        System.out.println("ï¿½ï¿½Â½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¶ï¿½ï¿½ï¿½");
+    }
 }

@@ -1,34 +1,27 @@
-public interface Implementor
-{
-	public void operationImpl();
+public interface Implementor {
+    public void operationImpl();
 }
 
-public class ConcreteImplementor implements Implementor
-{
-	public void operationImpl()
-	{
-		//¾ßÌåÊµÏÖ
-	}
+public class ConcreteImplementor implements Implementor {
+    public void operationImpl() {
+        //ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½
+    }
 }
 
-public abstract class Abstraction
-{
-	protected Implementor impl;
-	
-	public void setImpl(Implementor impl)
-	{
-		this.impl=impl;
-	}
-	
-	public abstract void operation();
+public abstract class Abstraction {
+    protected Implementor impl;
+
+    public void setImpl(Implementor impl) {
+        this.impl = impl;
+    }
+
+    public abstract void operation();
 }
 
-public class RefinedAbstraction extends Abstraction
-{
-	public void operation()
-	{
-		//´úÂë
-		impl.operationImpl();
-		//´úÂë
-	}
+public class RefinedAbstraction extends Abstraction {
+    public void operation() {
+        //ï¿½ï¿½ï¿½ï¿½
+        impl.operationImpl();
+        //ï¿½ï¿½ï¿½ï¿½
+    }
 }

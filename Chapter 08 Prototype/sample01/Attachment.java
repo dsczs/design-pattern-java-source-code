@@ -1,7 +1,5 @@
-public class Attachment
-{
-    public void download()
-    {
-    	System.out.println("обть╦╫╪Ч");	
+public class Attachment {
+    public void download() {
+        System.out.println("О©╫О©╫О©╫ь╦О©╫О©╫О©╫");
     }
 }

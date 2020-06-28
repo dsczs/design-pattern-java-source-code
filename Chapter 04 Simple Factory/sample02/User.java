@@ -1,9 +1,7 @@
-public abstract class User
-{
-	public void sameOperation()
-	{
-        System.out.println("修改个人资料！");
-	}
-	
-	public abstract void diffOperation();
+public abstract class User {
+    public void sameOperation() {
+        System.out.println("锟睫改革拷锟斤拷锟斤拷锟较ｏ拷");
+    }
+
+    public abstract void diffOperation();
 }

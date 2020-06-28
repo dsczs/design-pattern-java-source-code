@@ -1,17 +1,14 @@
-import java.sql.*;
-
 public class JDBCFacade {
-    
-    private Connection conn=null;
-    private Statement statement=null;
 
-    public void open(String driver,String jdbcUrl,String userName,String userPwd) {
+    private Connection conn = null;
+    private Statement statement = null;
+
+    public void open(String driver, String jdbcUrl, String userName, String userPwd) {
         try {
             Class.forName(driver).newInstance();
-            conn = DriverManager.getConnection(jdbcUrl,userName,userPwd);
+            conn = DriverManager.getConnection(jdbcUrl, userName, userPwd);
             statement = conn.createStatement();
-        } 
-        catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -19,8 +16,7 @@ public class JDBCFacade {
     public int executeUpdate(String sql) {
         try {
             return statement.executeUpdate(sql);
-        } 
-        catch (SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
             return -1;
         }

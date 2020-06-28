@@ -1,4 +1,3 @@
-public interface Node
-{
-	public int interpret();
+public interface Node {
+    public int interpret();
 }

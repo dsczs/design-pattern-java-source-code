@@ -1,7 +1,5 @@
-public class RealSubjectA implements AbstractSubject
-{	
-	public void request()
-	{
-		System.out.println("ÕæÊµÖ÷ÌâÀàA£¡");
-	}
+public class RealSubjectA implements AbstractSubject {
+    public void request() {
+        System.out.println("ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Aï¿½ï¿½");
+    }
 }

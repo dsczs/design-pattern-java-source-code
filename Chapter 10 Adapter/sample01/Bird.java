@@ -1,12 +1,9 @@
-public class Bird
-{
-	public void tweedle()
-	{
-		System.out.println("Äñ¶ùß´ß´½Ð£¡");
-	}
-	
-	public void fly()
-	{
-		System.out.println("Äñ¶ù¿ì¿ì·É£¡");
-	}
+public class Bird {
+    public void tweedle() {
+        System.out.println("ï¿½ï¿½ï¿½ß´ß´ï¿½Ð£ï¿½");
+    }
+
+    public void fly() {
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É£ï¿½");
+    }
 }

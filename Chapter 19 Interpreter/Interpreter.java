@@ -1,30 +1,24 @@
-public abstract class AbstractExpression
-{
-	public abstract void interpret(Context ctx);
-} 
-
-public class TerminalExpression extends AbstractExpression
-{
-	public void interpret(Context ctx)
-	{
-		//¶ÔÓÚÖÕ½á·û±í´ïÊ½µÄ½âÊÍ²Ù×÷
-	}
+public abstract class AbstractExpression {
+    public abstract void interpret(Context ctx);
 }
 
-public class NonterminalExpression extends AbstractExpression
-{
-	private AbstractExpression left;
-	private AbstractExpression right;
-	
-	public NonterminalExpression(AbstractExpression left,AbstractExpression right)
-	{
-		this.left=left;
-		this.right=right;
-	}
-	
-	public void interpret(Context ctx)
-	{
-		//µÝ¹éµ÷ÓÃÃ¿Ò»¸ö×é³É²¿·ÖµÄinterpret()·½·¨
-		//ÔÚµÝ¹éµ÷ÓÃÊ±Ö¸¶¨×é³É²¿·ÖµÄÁ¬½Ó·½Ê½£¬¼´·ÇÖÕ½á·ûµÄ¹¦ÄÜ
-	}	
+public class TerminalExpression extends AbstractExpression {
+    public void interpret(Context ctx) {
+        //ï¿½ï¿½ï¿½ï¿½ï¿½Õ½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½Ä½ï¿½ï¿½Í²ï¿½ï¿½ï¿½
+    }
+}
+
+public class NonterminalExpression extends AbstractExpression {
+    private AbstractExpression left;
+    private AbstractExpression right;
+
+    public NonterminalExpression(AbstractExpression left, AbstractExpression right) {
+        this.left = left;
+        this.right = right;
+    }
+
+    public void interpret(Context ctx) {
+        //ï¿½Ý¹ï¿½ï¿½ï¿½ï¿½Ã¿Ò»ï¿½ï¿½ï¿½ï¿½É²ï¿½ï¿½Öµï¿½interpret()ï¿½ï¿½ï¿½ï¿½
+        //ï¿½ÚµÝ¹ï¿½ï¿½ï¿½ï¿½Ê±Ö¸ï¿½ï¿½ï¿½ï¿½É²ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½Ó·ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ½ï¿½ï¿½ï¿½Ä¹ï¿½ï¿½ï¿½
+    }
 }

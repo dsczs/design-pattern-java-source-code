@@ -1,9 +1,5 @@
-import java.io.*;
-
-public class Attachment implements Serializable
-{
-    public void download()
-    {
-    	System.out.println("обть╦╫╪Ч");	
+public class Attachment implements Serializable {
+    public void download() {
+        System.out.println("О©╫О©╫О©╫ь╦О©╫О©╫О©╫");
     }
 }

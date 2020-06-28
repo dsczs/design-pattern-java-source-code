@@ -1,12 +1,9 @@
-public class Dog
-{
-	public void wang()
-	{
-		System.out.println("¹·ÍôÍô½Ð£¡");
-	}
-	
-	public void run()
-	{
-		System.out.println("¹·¿ì¿ìÅÜ£¡");
-	}
+public class Dog {
+    public void wang() {
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð£ï¿½");
+    }
+
+    public void run() {
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü£ï¿½");
+    }
 }

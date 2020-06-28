@@ -1,20 +1,15 @@
-import java.util.*;
+public abstract class MySubject {
+    protected ArrayList observers = new ArrayList();
 
-public abstract class MySubject
-{
-	protected ArrayList observers = new ArrayList();
-	
-	//×¢²á·½·¨
-	public void attach(MyObserver observer)
-	{
-		observers.add(observer);
-	} 
-	
-	//×¢Ïú·½·¨
-	public void detach(MyObserver observer)
-	{
-		observers.remove(observer);
-	}
-	
-	public abstract void cry(); //³éÏóÍ¨Öª·½·¨
+    //×¢ï¿½á·½ï¿½ï¿½
+    public void attach(MyObserver observer) {
+        observers.add(observer);
+    }
+
+    //×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    public void detach(MyObserver observer) {
+        observers.remove(observer);
+    }
+
+    public abstract void cry(); //ï¿½ï¿½ï¿½ï¿½Í¨Öªï¿½ï¿½ï¿½ï¿½
 }

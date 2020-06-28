@@ -3,72 +3,64 @@ import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;
 
 public class DESEncrypt {
-	public static void main(String args[])
-	{
-		String codeStringBegin="Sunny Liu";  //Òª¼ÓÃÜµÄÃ÷ÎÄ
-		String codeStringEnd=null;             //¼ÓÃÜºóµÄÃÜÎÄ
-		String decodeString=null;              //ÃÜÎÄ½âÃÜºóµÃµ½µÄÃ÷ÎÄ
-		String cipherType = "DESede"; //¼ÓÃÜËã·¨ÀàĞÍ£¬¿ÉÉèÖÃÎªDES¡¢DESede¡¢AESµÈ×Ö·û´®
-		int keyLength = 112; //ÉèÖÃÃÜÔ¿³¤¶È
-		try
-		{
-			//»ñÈ¡ÃÜÔ¿Éú³ÉÆ÷
-			KeyGenerator keyGen=KeyGenerator.getInstance(cipherType);
-			//³õÊ¼»¯ÃÜÔ¿Éú³ÉÆ÷£¬²»Í¬µÄ¼ÓÃÜËã·¨ÆäÃÜÔ¿³¤¶È¿ÉÄÜ²»Í¬
-			keyGen.init(keyLength);
-			//Éú³ÉÃÜÔ¿
-			SecretKey key=keyGen.generateKey();
-	
-			//µÃµ½ÃÜÔ¿×Ö½ÚÂë
-			byte[] keyByte=key.getEncoded();
-			//Êä³öÃÜÔ¿µÄ×Ö½ÚÂë
-			System.out.println("ÃÜÔ¿ÊÇ£º");
-			for(int i=0;i<keyByte.length;i++)
-			{
-				System.out.print(keyByte[i]+",");
-			}
-			System.out.println("");
-			//´´½¨ÃÜÂëÆ÷
-			Cipher cp=Cipher.getInstance(cipherType); 
-			//³õÊ¼»¯ÃÜÂëÆ÷
-			cp.init(Cipher.ENCRYPT_MODE,key);
-			System.out.println("Òª¼ÓÃÜµÄ×Ö·û´®ÊÇ£º"+ codeStringBegin);
-			byte[] codeStringByte=codeStringBegin.getBytes("UTF8");
-			System.out.println("Òª¼ÓÃÜµÄ×Ö·û´®¶ÔÓ¦µÄ×Ö½ÚÂëÊÇ£º");
-			for(int i=0;i<codeStringByte.length;i++)
-			{
-				System.out.print(codeStringByte[i]+",");
-			}
-			System.out.println("");
-			//¿ªÊ¼¼ÓÃÜ
-			byte[] codeStringByteEnd=cp.doFinal(codeStringByte);
-			System.out.println("¼ÓÃÜºóµÄ×Ö·û´®¶ÔÓ¦µÄ×Ö½ÚÂëÊÇ£º");
-			for(int i=0;i<codeStringByteEnd.length;i++)
-			{
-				System.out.print(codeStringByteEnd[i]+",");
-			}
-			System.out.println("");
-			codeStringEnd=new String(codeStringByteEnd);
-			System.out.println("¼ÓÃÜºóµÄ×Ö·û´®ÊÇ£º" + codeStringEnd);
-			System.out.println("");
-			//ÖØĞÂ³õÊ¼»¯ÃÜÂëÆ÷
-			cp.init(Cipher.DECRYPT_MODE,key);
-			//¿ªÊ¼½âÃÜ
-			byte[] decodeStringByteEnd=cp.doFinal(codeStringByteEnd);
-			System.out.println("½âÃÜºóµÄ×Ö·û´®¶ÔÓ¦µÄ×Ö½ÚÂëÊÇ£º");
-			for(int i=0;i<decodeStringByteEnd.length;i++)
-			{
-				System.out.print(decodeStringByteEnd[i]+",");
-			}
-			System.out.println("");
-			decodeString=new String(decodeStringByteEnd);
-			System.out.println("½âÃÜºóµÄ×Ö·û´®ÊÇ£º" + decodeString);
-			System.out.println("");
-		} 
-		catch(Exception e)
-		{
-			e.printStackTrace();
-		}
-	}   
+    public static void main(String args[]) {
+        String codeStringBegin = "Sunny Liu";  //è¦åŠ å¯†çš„æ˜æ–‡
+        String codeStringEnd = null;             //åŠ å¯†åçš„å¯†æ–‡
+        String decodeString = null;              //å¯†æ–‡è§£å¯†åå¾—åˆ°çš„æ˜æ–‡
+        String cipherType = "DESede"; //åŠ å¯†ç®—æ³•ç±»å‹ï¼Œå¯è®¾ç½®ä¸ºDESã€DESedeã€AESç­‰å­—ç¬¦ä¸²
+        int keyLength = 112; //è®¾ç½®å¯†é’¥é•¿åº¦
+        try {
+            //è·å–å¯†é’¥ç”Ÿæˆå™¨
+            KeyGenerator keyGen = KeyGenerator.getInstance(cipherType);
+            //åˆå§‹åŒ–å¯†é’¥ç”Ÿæˆå™¨ï¼Œä¸åŒçš„åŠ å¯†ç®—æ³•å…¶å¯†é’¥é•¿åº¦å¯èƒ½ä¸åŒ
+            keyGen.init(keyLength);
+            //ç”Ÿæˆå¯†é’¥
+            SecretKey key = keyGen.generateKey();
+
+            //å¾—åˆ°å¯†é’¥å­—èŠ‚ç 
+            byte[] keyByte = key.getEncoded();
+            //è¾“å‡ºå¯†é’¥çš„å­—èŠ‚ç 
+            System.out.println("å¯†é’¥æ˜¯ï¼š");
+            for (int i = 0; i < keyByte.length; i++) {
+                System.out.print(keyByte[i] + ",");
+            }
+            System.out.println("");
+            //åˆ›å»ºå¯†ç å™¨
+            Cipher cp = Cipher.getInstance(cipherType);
+            //åˆå§‹åŒ–å¯†ç å™¨
+            cp.init(Cipher.ENCRYPT_MODE, key);
+            System.out.println("è¦åŠ å¯†çš„å­—ç¬¦ä¸²æ˜¯ï¼š" + codeStringBegin);
+            byte[] codeStringByte = codeStringBegin.getBytes("UTF8");
+            System.out.println("è¦åŠ å¯†çš„å­—ç¬¦ä¸²å¯¹åº”çš„å­—èŠ‚ç æ˜¯ï¼š");
+            for (int i = 0; i < codeStringByte.length; i++) {
+                System.out.print(codeStringByte[i] + ",");
+            }
+            System.out.println("");
+            //å¼€å§‹åŠ å¯†
+            byte[] codeStringByteEnd = cp.doFinal(codeStringByte);
+            System.out.println("åŠ å¯†åçš„å­—ç¬¦ä¸²å¯¹åº”çš„å­—èŠ‚ç æ˜¯ï¼š");
+            for (int i = 0; i < codeStringByteEnd.length; i++) {
+                System.out.print(codeStringByteEnd[i] + ",");
+            }
+            System.out.println("");
+            codeStringEnd = new String(codeStringByteEnd);
+            System.out.println("åŠ å¯†åçš„å­—ç¬¦ä¸²æ˜¯ï¼š" + codeStringEnd);
+            System.out.println("");
+            //é‡æ–°åˆå§‹åŒ–å¯†ç å™¨
+            cp.init(Cipher.DECRYPT_MODE, key);
+            //å¼€å§‹è§£å¯†
+            byte[] decodeStringByteEnd = cp.doFinal(codeStringByteEnd);
+            System.out.println("è§£å¯†åçš„å­—ç¬¦ä¸²å¯¹åº”çš„å­—èŠ‚ç æ˜¯ï¼š");
+            for (int i = 0; i < decodeStringByteEnd.length; i++) {
+                System.out.print(decodeStringByteEnd[i] + ",");
+            }
+            System.out.println("");
+            decodeString = new String(decodeStringByteEnd);
+            System.out.println("è§£å¯†åçš„å­—ç¬¦ä¸²æ˜¯ï¼š" + decodeString);
+            System.out.println("");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }
  

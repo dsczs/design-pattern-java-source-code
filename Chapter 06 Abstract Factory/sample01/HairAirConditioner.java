@@ -1,7 +1,5 @@
-public class HairAirConditioner implements AirConditioner
-{
-	public void changeTemperature()
-	{
-		System.out.println("º£¶û¿Õµ÷ÎÂ¶È¸Ä±äÖÐ......");
-	}
+public class HairAirConditioner implements AirConditioner {
+    public void changeTemperature() {
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½Õµï¿½ï¿½Â¶È¸Ä±ï¿½ï¿½ï¿½......");
+    }
 }

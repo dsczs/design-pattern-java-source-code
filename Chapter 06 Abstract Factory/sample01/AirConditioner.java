@@ -1,4 +1,3 @@
-public interface AirConditioner
-{
-	public void changeTemperature();
+public interface AirConditioner {
+    public void changeTemperature();
 }

@@ -1,5 +1,5 @@
-public interface EFactory
-{
-	public Television produceTelevision();
-	public AirConditioner produceAirConditioner();
+public interface EFactory {
+    public Television produceTelevision();
+
+    public AirConditioner produceAirConditioner();
 }

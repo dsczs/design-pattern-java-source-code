@@ -1,7 +1,5 @@
-public class TCLTelevision implements Television
-{
-	public void play()
-	{
-		System.out.println("TCLµçÊÓ»ú²¥·ÅÖÐ......");
-	}
+public class TCLTelevision implements Television {
+    public void play() {
+        System.out.println("TCLï¿½ï¿½ï¿½Ó»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½......");
+    }
 }

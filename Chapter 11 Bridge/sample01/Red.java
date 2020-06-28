@@ -1,7 +1,5 @@
-public class Red implements Color
-{
-	public void bepaint(String penType,String name)
-	{
-		System.out.println(penType + "ºìÉ«µÄ"+ name + ".");
-	}
+public class Red implements Color {
+    public void bepaint(String penType, String name) {
+        System.out.println(penType + "ï¿½ï¿½É«ï¿½ï¿½" + name + ".");
+    }
 }

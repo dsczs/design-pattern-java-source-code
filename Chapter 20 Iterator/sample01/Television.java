@@ -1,4 +1,3 @@
-public interface Television
-{
-	TVIterator createIterator();
+public interface Television {
+    TVIterator createIterator();
 }
